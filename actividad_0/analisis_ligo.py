@@ -18,12 +18,12 @@ for p in datos_path:
 
 datos = [np.loadtxt(d) for d in datos_path]
 
-print(tiempos_iniciales)
+#print(tiempos_iniciales)
 
 for i, data in enumerate(datos):
 	utc = datetime(1980, 1, 6) + timedelta(seconds=int(tiempos_iniciales[i]) - (35 - 19))
 	x = np.linspace(0, 32, len(data))
-	print(len(data))
+	print(utc)
 	plt.title(utc)
 	plt.plot(x, data)
 	plt.show()
