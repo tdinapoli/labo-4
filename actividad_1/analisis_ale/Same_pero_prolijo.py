@@ -6,6 +6,7 @@ from scipy import signal
 from scipy import ndimage
 from skimage.transform import rescale
 from scipy import optimize
+from matplotlib.patches import Rectangle
 
 def boolean_float(x):
     if x == True:
@@ -78,11 +79,40 @@ filtro = (R>40)
 fil_fl = np.vectorize(boolean_float)(filtro).astype(float)
 plt.figure(3)
 plt.imshow(filtro)
+plt.savefig('filtro.png', dpi = 800)
+
+fig, ax = plt.subplots()
+ax.imshow(fil_fl)
+rect = patches.Rectangle((1000, 1000),150, 50,  linewidth = 1.5, edgecolor = 'red',  facecolor="none")
+#ax.add_patch(Rectangle((950, 1000),110, 50),  linewidth = 1, edgecolor = 'red',  facecolor="none")
+ax.add_patch(rect)
+plt.xlabel('Pixeles')
+plt.ylabel('Pixeles')
+plt.savefig('filtro.png', dpi  =1000)
+
+#fil_fl[1030, :] = ndimage.maximum(fil_fl[:])
+plt.figure()
+#plt.imshow(fil_fl[950:1150, 1000:1150])
+plt.imshow(fil_fl[950:1150, 1000:1150])
+plt.hlines(80, 0,149, color =  'orangered', linewidth = 2)
+plt.xlabel('Pixeles')
+plt.ylabel('Pixeles')
+plt.savefig('zoom_filtro.png', dpi  =1000)
+
 
 inte_2 = fil_fl[1030, 1000:1150]
 plt.figure(4)
 plt.plot(inte_2)
+
 #data = plt.ginput(8)
+data = np.array(data)
+data_X = data[:,0]
+data_Y = data[:,1]
+plt.plot(data_X,data_Y, "ro")
+plt.xlabel('Pixeles')
+plt.ylabel('Intensidad')
+plt.title('Escala')
+plt.savefig('escala.png', dpi = 1000)
 
 
 x_data = []
@@ -147,8 +177,14 @@ borde = np.concatenate((np.array(borde2),np.array(borde1)))
 borde = np.array(borde)
 borde_x_2 = borde[:,0]
 borde_y_2 = borde[:,1]
-plt.plot(borde_x_2, borde_y_2, color = 'salmon',linewidth=2)
+plt.plot(borde_x_2, borde_y_2, color = 'red',linewidth=2, label ='Datos adquiridos')
 plt.imshow(filtro[36:640, 23:600])
+plt.xlim(100,575)
+plt.ylim(500)
+plt.legend(loc = 'upper right')
+plt.xlabel('Pixeles')
+plt.ylabel('Pixeles')
+plt.savefig('mon_2pr_bin.png', dpi = 1000)
 plt.show()
 
 
@@ -191,17 +227,20 @@ er = 2*np.std(Ri_1-R_1)
 ejex = np.arange(im.shape[1])/escala
 ejey = np.arange(im.shape[0])/escala
 
-circulo2pe = plt.Circle((xc_1,yc_1), R_1, color = 'orangered', fill = False)
+circulo2pe = plt.Circle((xc_1,yc_1), R_1, color = 'red', fill = False, label ='Cículo aproximado',linewidth= 2)
 
 plt.figure()
 #plt.imshow(im[94:607],[645,1138])
-plt.imshow(im[36:640, 23:600])#, extent=[ ejex.min(), ejex.max(), ejey.min(), ejey.max()])
-plt.plot(borde_x_2, borde_y_2, color = 'blue',linewidth=2)
-plt.plot(xc_1, yc_1, "go")
+plt.imshow(im[36:640, 23:700])#, extent=[ ejex.min(), ejex.max(), ejey.min(), ejey.max()])
+plt.plot(borde_x_2, borde_y_2, color = 'blue',linewidth=2, label = 'Datos adquiridos')
+plt.plot(xc_1, yc_1, "go", label = 'Centro del círculo')
 plt.gca().add_patch(circulo2pe)
 # plt.xlabel('X [mm]')
+plt.xlabel('Pixeles')
+plt.ylabel('Pixeles')
+plt.legend()
 # plt.ylabel('Y [mm]')
-#plt.savefig("2_pesos_inc.png")
+plt.savefig("2_pesos_inc.png")
 error_malo = np.sqrt((2*residu_1/escala)**2 + (2*R_1*err_escala/(escala**2))**2)
 error = np.sqrt((2*er/escala)**2 + (2*R_1*err_escala/(escala**2))**2)
 
@@ -241,8 +280,12 @@ borde = tomar_borde(filtro[450:850,1100:1600], inicio=[300,58],fin=[400,160], di
 borde = np.array(borde)
 borde_x = borde[:,0]
 borde_y = borde[:,1]
-plt.plot(borde_x, borde_y, color = 'salmon',linewidth=2)
+plt.plot(borde_x, borde_y, color = 'blue',linewidth=2, label = 'Puntos adquiridos')
 plt.imshow(filtro[450:900,1100:1600])
+plt.xlabel('Pixeles')
+plt.ylabel('Pixeles')
+plt.legend(loc = 'lower left')
+plt.savefig('1cent_bin.png', dpi = 1000)
 plt.show()
 
 
@@ -285,19 +328,21 @@ centro = xc_1, yc_1
 ejex = np.arange(im.shape[1])/escala
 ejey = np.arange(im.shape[0])/escala
 
-circulo1ce = plt.Circle((xc_1,yc_1), R_1, color = 'orangered', fill = False)
+circulo1ce = plt.Circle((xc_1,yc_1), R_1, color = 'yellow', fill = False, label ='Cículo aproximado', linewidth=2)
 
 
 plt.figure()
 plt.imshow(im[450:900,1100:1600])
-plt.plot(borde_x, borde_y, color = 'blue',linewidth=2)
-plt.plot(xc_1,yc_1, "ro")
+plt.plot(borde_x, borde_y, color = 'blue',linewidth=2, label =  'Datos adquiridos')
+plt.plot(xc_1,yc_1, 'go', label = 'Centro del círculo')
 plt.gca().add_patch(circulo1ce)
-plt.savefig('1centavo.png')
+#plt.savefig('1centavo.png')
 #plt.plot(centro, 'bo')
-plt.xlabel('X [mm]')
-plt.ylabel('Y [mm]')
+plt.xlabel('Pixeles')
+plt.ylabel('Pixeles')
+plt.legend()
 
 
+plt.savefig('moneda_1ce_comp.png',dpi = 1000)
 error_malo = np.sqrt((2*residu_1/escala)**2 + (2*R_1*err_escala/(escala**2))**2)
 error = np.sqrt((2*er/escala)**2 + (2*R_1*err_escala/(escala**2))**2)
