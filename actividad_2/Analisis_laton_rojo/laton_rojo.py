@@ -90,10 +90,10 @@ datos = []
 for i in range(len(im_r)):
     data = []
     for j in range(len(im_r[i])):
-        data.append(sum(im_r[i][j])/esc)
+        data.append(sum(im_r[i][j]))
     datos.append(data)
 
-
+#%%
 for i in range(len(datos)):
     if i<3:
         plt.figure()
@@ -110,3 +110,16 @@ for i in range(len(datos)):
         x_esc = np.linspace(0, len(datos[i])/esc, 730)
         plt.plot(x_esc, datos[i][100:830])
         plt.xlabel('mm')
+        
+#%%
+datos_V =  []
+for i in range(len(im_r)):
+    data_v = []
+    for j in range(np.shape(im_r[i])[1]):
+        im_r[i] = np.array(im_r[i])
+        data_v.append(sum(im_r[i][:,j]))
+    datos_V.append(data_v)
+    
+for i in range(len(datos_V)):
+    plt.figure()
+    plt.plot(datos_V[i])
