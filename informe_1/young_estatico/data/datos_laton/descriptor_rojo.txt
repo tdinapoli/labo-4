@@ -1,0 +1,24 @@
+Mediciones de deflexión de la barra de latón;
+.longitud de onda del láser: 632.8nm (incerteza despreciable), He-Ne
+.diametro de la barra de latón: (4.6±0.2)mm
+.distancia de la rendija a la pantalla: (125.0±0.5)cm
+.Largo de la varilla/ubicación del platillo con los pesos: (31.0±0.5)cm
+.posición de la rendija/medición de la deflexión (x): (22.0±0.5)cm
+
+En la lista de las masas agregadas falta la masa del platillo/gancho para colgar las masas, que pesa unos 18 gramos. Influye esto?
+
+     masas (g)       archivo
+        0          datos1.jpg
+      2.517        datosrojo2.jpg
+      5.022        datosrojo3.jpg
+      7.486        datosrojo4.jpg
+      10.870       datosrojo5.jpg
+      12.502       datosrojo6.jpg
+      15.013       datosrojo7.jpg
+      17.491       datosrojo8.jpg
+      20.280       datosrojo9.jpg
+      22.513       datosrojo10.jpg
+
+incerteza de las masas en la última cifra significativa (0.005 g)
+
+.archivo con imagen de la pantalla de calibración: grilla_cali_rojo.jpg
