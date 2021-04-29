@@ -1,0 +1,21 @@
+Mediciones de deflexión de la barra de acero;
+.longitud de onda del láser: (670±5)nm, puntero rojo
+.diametro de la barra de acero: (4.0±0.2)mm
+.distancia de la rendija a la pantalla: (189.0±0.5)cm
+.Largo de la varilla/ubicación del platillo con los pesos: (30.9±0.5)cm
+.posición de la rendija/medición de la deflexión (x): (25.9±0.5)cm
+
+
+     masas (g)       archivo
+      1.0043         a00.jpg
+      3.0912          a0.jpg
+      4.8188          a1.jpg
+      6.9318          a2.jpg
+      9.0212          a3.jpg
+     11.0755          a4.jpg
+     13.6564          a5.jpg
+      
+incerteza de las masas en la última cifra significativa (0.0005 g)
+
+.archivo con imagen de la pantalla de calibración: papela.jpg
+

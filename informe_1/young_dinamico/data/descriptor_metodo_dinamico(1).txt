@@ -1,0 +1,14 @@
+Mediciones adicionales de los experimentos del método dinámico:
+
+Barra de latón:
+.longitud de la barra en voladizo (barra oscilante): (255±2)mm
+.diametro de la barra de latón: (4.6±0.2)mm
+la densidad del material no fue medida; tendremos que obtenerla de tablas de materiales standard.
+
+           --------------------------
+
+Barra de acero:
+.longitud de la barra en voladizo (barra oscilante): (240±2)mm
+.diametro de la barra de acero: (4.0±0.2)mm
+la densidad del material no fue medida; tendremos que obtenerla de tablas de materiales standard.
+
