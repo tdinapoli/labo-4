@@ -32,7 +32,7 @@ lock = SR830(config)
 def medir(lock):
     R, tita = lock.getMedicion("RT")
 
-    print(f"R (amplitud) tiene un valor de {R}Volts\n tita tiene un valor de {tita}")
+    print(f"R (amplitud) tiene un valor de {R}Volts\ntita tiene un valor de {tita}")
     return [R, tita]
 #%%
 import numpy as np
