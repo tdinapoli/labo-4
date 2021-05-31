@@ -91,6 +91,10 @@ class SR830:
         '''Setea la pendiente del filtro pasabajos. 3=24dB/oct '''
         self._lockin.write(f"OFSL {slope}")
 
+    def setNotch(self, notch_mode):
+        '''Setea el modo del notch. Ver página 89 manual'''
+        self._lockin.write(f"ILIN {notch_mode}")
+        
     def setModoReferencia(self, isIntern):
         '''Setea si la referencia a usar es interna (True) o externa (False)'''
         self._lockin.write(f"FMOD {int(isIntern)}")
@@ -138,6 +142,7 @@ class SR830:
             return self._lockin.query_ascii_values('SNAP? 3, 4', separator=',')
         else:
             print('No entendí lo que querés medir')
+        
 
     def getIntegrationTime(self):
 
