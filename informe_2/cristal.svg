@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="cristal.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.53165938"
+     inkscape:cx="33.856263"
+     inkscape:cy="285.89733"
+     inkscape:window-width="1600"
+     inkscape:window-height="863"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect2837"
+       style="fill:#aaccff;fill-rule:evenodd;stroke-width:0.264583"
+       d="m 97.46137,39.809194 h 29.56414 L 108.9747,53.501834 H 79.410562 Z"
+       sodipodi:nodetypes="ccccc" />
+    <rect
+       style="opacity:0.894832;fill:#80b3ff;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect3401"
+       width="29.624365"
+       height="123.31927"
+       x="79.410561"
+       y="53.501835" />
+    <path
+       id="rect3781"
+       style="opacity:0.894832;fill:#5599ff;stroke-width:0.264583"
+       d="M 109.03493,53.501827 127.02551,39.809194 126.88908,163.4687 108.8985,177.16134 Z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect4775"
+       style="opacity:0.894832;fill:#ac9393;stroke-width:0.294138"
+       d="M 112.45852,60.344528 124.76533,49.581404 V 158.22743 l -12.30681,10.76313 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#b87333;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 119.60305,107.7854 c 46.18494,-0.41297 39.86671,0.18492 39.86671,0.18492"
+       id="path5793" />
+    <path
+       style="fill:none;stroke:#b87333;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 79.616408,109.84647 C 55.348145,109.33423 55.327269,109.14809 55.327269,109.14809"
+       id="path6007" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.40053px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.185014"
+       x="28.20248"
+       y="86.989105"
+       id="text8258"
+       transform="rotate(-38.585125)"><tspan
+         id="tspan8256"
+         style="stroke-width:0.185014"
+         x="28.20248"
+         y="86.989105"
+         sodipodi:role="line">4mm</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.40053px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.185014"
+       x="101.00461"
+       y="39.324207"
+       id="text8258-9"
+       transform="rotate(-2.0146447)"><tspan
+         id="tspan8256-7"
+         style="stroke-width:0.185014"
+         x="101.00461"
+         y="39.324207"
+         sodipodi:role="line">4mm</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.32037px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.183009"
+       x="-148.79604"
+       y="75.352837"
+       id="text19098"
+       transform="rotate(-89.53353)"><tspan
+         sodipodi:role="line"
+         id="tspan19096"
+         style="stroke-width:0.183009"
+         x="-148.79604"
+         y="75.352837">50mm</tspan></text>
+  </g>
+</svg>
